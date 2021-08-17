@@ -1,10 +1,11 @@
 package hiber.model;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 
-@Table(name = "user")
+@Table(name = "car")
 @Entity
 public class Car {
     @Id
@@ -15,6 +16,7 @@ public class Car {
 
     private String model;
     private int series;
+
 
     @OneToOne
     @PrimaryKeyJoinColumn
